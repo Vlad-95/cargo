@@ -1,0 +1,29 @@
+.footer {
+    background-color: @dark;
+    padding: 29px 0;
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        color: @white;
+        font-size: 11px;
+        font-family: @lato;
+        position: relative;
+
+        &:not(:last-of-type) {
+            margin-right: 18px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -9px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: @white;
+        }
+    }
+}
