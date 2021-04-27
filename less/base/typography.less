@@ -59,9 +59,11 @@ li:last-child {
 .main {
   background-color: @dark-light;
   min-height: 100vh;
+  overflow: hidden;
 
   &__wrap {
     display: flex;
+    position: relative;
   }
 }
 
@@ -72,4 +74,22 @@ li:last-child {
 
 .svg-fill-white {
   fill: @white;
+}
+
+@media (max-width: 1200px) {
+  .page-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 22px;
+  }
+
+  .main {
+    &__wrap {
+      flex-wrap: wrap;
+    }
+  }
 }

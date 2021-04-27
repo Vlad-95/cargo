@@ -72,9 +72,9 @@
                         </a>
                     </div>
 
-                    <!-- <div class="burger">
+                    <div class="burger">
                         <span></span><span></span><span></span>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,9 +105,9 @@
                     
                 </div>
             </div>
-            <!-- <div class="close">
+            <div class="close">
                 <span></span><span></span>
-            </div> -->
+            </div>
         </div>
         
     </header>
@@ -116,12 +116,22 @@
         <div class="wrapper">
             <div class="main__wrap">
                 <aside class="sidebar">
-                    <div class="sidebar__item">
+                    <div class="sidebar__item js-accordion-item">
                         <h2 class="sidebar__item-name">
                             Cargo-online
-                            <div class="sidebar__item-toggle"></div>
+                            <div class="sidebar__item-toggle js-accordion-toggle">
+
+                                <svg version="1.1" width="10" height="10" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+                                    <path fill="#fff" id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                                        c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                                        s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                                    
+                                </svg>
+                           
+                            </div>
                         </h2>
-                        <ul class="sidebar__drop">
+                        <ul class="sidebar__drop js-accordion-drop">
                             <li class="sidebar__drop-item">
                                 <a href="javascript:;" class="sidebar__drop-link">
                                     <div class="sidebar__drop-icon">
@@ -284,9 +294,22 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="sidebar__item">
-                        <h2 class="sidebar__item-name">Доверености</h2>
-                        <ul class="sidebar__drop">
+                    <div class="sidebar__item js-accordion-item">
+                        <h2 class="sidebar__item-name">Доверености
+
+                            <div class="sidebar__item-toggle js-accordion-toggle">
+
+                                <svg version="1.1" width="10" height="10" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+                                    <path fill="#fff" id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                                        c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                                        s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                                    
+                                </svg>
+                           
+                            </div>
+                        </h2>
+                        <ul class="sidebar__drop js-accordion-drop">
                             <li class="sidebar__drop-item">
                                 <a href="javascript:;" class="sidebar__drop-link">
                                     <div class="sidebar__drop-icon">
@@ -326,15 +349,15 @@
                         <h1 class="page-title">Заказ релиза</h1>
 
                         <div class="btns">
-                            <a href="javascript:;" class="btn btn_fill btn_uppercase">Расчитать</a>
-                            <a href="javascript:;" class="btn btn_fill btn_uppercase">Заказать релиз</a>
+                            <a href="javascript:;" class="btn btn_fill btn_uppercase js-popup-open">Расчитать</a>
+                            <a href="javascript:;" class="btn btn_fill btn_uppercase js-popup-open">Заказать релиз</a>
                         </div>
                     </div>
 
                     <div class="content__filter">
                         <form action="" class="filter">
                             <div class="filter__item filter__item_terminal">
-                                <select name="" id="" class="js-select" style="width: 100%">
+                                <select name="" id="" class="filter__select js-select" style="width: 100%">
                                     <option>Терминал</option>
                                     <option>ВАААА</option>
                                 </select>
@@ -349,23 +372,117 @@
                     </div>
 
                     <div class="content__table">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <td>№</td>
-                                    <td>ID</td>
-                                    <td>№ контейнера</td>
-                                    <td>Тип контейнера</td>
-                                    <td>Блок по фрахту / лок. сборам</td>
-                                    <td>Блок по документам</td>
-                                    <td>Дата действия релиза</td>
-                                    <td>Ожидаемая дата выгрузки</td>
-                                    <td>Дата выгрузки</td>
-                                    <td>Ожидаемая дата вывоза</td>
-                                    <td>Стоимость</td>
-                                </tr>
-                            </thead>
-                        </table>
+                        <div class="scroll-table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td>№</td>
+                                        <td>ID</td>
+                                        <td>№ контейнера</td>
+                                        <td>Тип контейнера</td>
+                                        <td>Блок по фрахту / лок. сборам</td>
+                                        <td>Блок по документам</td>
+                                        <td>Дата действия релиза</td>
+                                        <td>Ожидаемая дата выгрузки</td>
+                                        <td>Дата выгрузки</td>
+                                        <td>Ожидаемая дата вывоза</td>
+                                        <td>Стоимость</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">1</option>
+                                                <option value="">Тест</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">1</option>
+                                                <option value="">Тест</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">1</option>
+                                                <option value="">Тест</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">1</option>
+                                                <option value="">Тест</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">1</option>
+                                                <option value="">Тест</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">1</option>
+                                                <option value="">Тест</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">1</option>
+                                                <option value="">Тест</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;">Расходы по контейнеру</a>
+                                        </td>
+                                        <td>100</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>Какой-то текст</td>
+                                        <td>1000</td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -383,6 +500,22 @@
             </div>
         </div>        
     </footer>
+
+    <div class="popup">
+        <div class="popup__wrap">
+            <div class="popup__success">
+                <h2 class="popup__name">Заявка отправлена</h2>
+                <div class="popup__content">
+                    <p>Вы отправили заявку на звонок, наш менеджер с Вами свяжется в ближайшее время. Вы можете вернуться к авторизации на нашем портале</p>
+                </div>
+                <div class="popup__close js-popup-close">
+                    <span></span><span></span>
+                </div>
+                <a href="javascript:;" class="popup__btn btn btn_fill btn_uppercase js-popup-close">Понятно</a>
+            </div>
+        </div>
+        
+    </div>
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
 <script src="js/libs/jquery-ui.js"></script>

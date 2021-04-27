@@ -60,6 +60,17 @@
         padding: 7px 15px;
     }
 
+    &__select {
+        outline: none;
+        border: none;
+        font-family: @ubuntu;
+        font-size: 13px;
+        font-weight: 300;
+        height: 28px;
+        border-radius: 100px;
+        padding: 0 10px;
+    }
+
     .select2-container {
         outline: none;
     }
@@ -75,4 +86,52 @@
         font-size: 13px;
         color: @dark;
     }
+}
+
+@media (max-width: 992px) {
+    .filter {
+        display: block;
+
+        &__item {
+            &_date {
+                margin-left: 0;
+                margin-top: 10px;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        &__input {
+            width: 142px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .filter {
+        &__item {
+
+            &_terminal {
+                width: 100%;
+            }
+
+            &_date {
+                width: 100%;
+                display: block;
+
+                .filter__btn {
+                    margin-left: 0;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+    
 }

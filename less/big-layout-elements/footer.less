@@ -3,27 +3,31 @@
     padding: 29px 0;
     &__wrap {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
 
     &__item {
         color: @white;
         font-size: 11px;
+        line-height: 1.2;
         font-family: @lato;
         position: relative;
 
         &:not(:last-of-type) {
             margin-right: 18px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: -9px;
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background-color: @white;
+            }
         }
 
-        &:after {
-            content: '';
-            position: absolute;
-            right: -9px;
-            top: 0;
-            width: 1px;
-            height: 100%;
-            background-color: @white;
-        }
+        
     }
 }
