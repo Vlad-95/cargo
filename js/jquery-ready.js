@@ -46,11 +46,40 @@ $(document).ready(function() {
     }
 
     //открытие всплывашки
+    let timer;
     $('.js-popup-open').click(function() {
+        let target = $(this).data("target");
+        $('.popup__item').removeClass('active');
+        $('.popup__item[data-name="'+ target +'"]').addClass('active');
         $('.popup').fadeIn();
+        
+        if($('.popup__item.active').find('.popup__close_wait')) {
+            
+            $('.popup__close_wait').addClass('animate');
+
+            function activeClose() {
+                $('.popup__close_wait').addClass('active');
+
+                $('.popup__close_wait').bind('click', closeModal)
+            }
+              
+            timer = setTimeout(activeClose, 5000);
+            
+        }        
+        
     })
     //закрытие всплывашки
-    $('.js-popup-close').click(function() {
+    let closeModal = function () {
+        $('.popup__item').removeClass('active');
         $(this).closest('.popup').fadeOut();
-    })
+
+        if($(this).hasClass('popup__close_wait')) {
+            $('.popup__close_wait').removeClass('animate active');
+
+            clearTimeout(timer);
+        }
+        
+    }
+
+    $('.js-popup-close').click(closeModal);
 });
