@@ -75,7 +75,7 @@ $(document).ready(function() {
 
         if($(this).hasClass('popup__close_wait')) {
             $('.popup__close_wait').removeClass('animate active');
-
+            $('.popup__close_wait').unbind('click', closeModal);
             clearTimeout(timer);
         }
         
